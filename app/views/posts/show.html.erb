@@ -1,0 +1,21 @@
+<div class "row">
+	<div class="col-md-8 well">
+		<h3><% @post.title%></h3>
+		<p>
+			<%= @post.title%>
+		</p>
+	</div>
+</div>
+
+<% @post.comments.each do |comment|%>
+	<div class="col-md-6 well">
+	<p>
+		<%= @post.content%>
+	</p>
+	</div>
+<% end %>
+
+<br>
+<br>
+
+<%= ink_to 'go back to all posts', posts_path %>
